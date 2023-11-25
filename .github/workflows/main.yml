@@ -25,7 +25,10 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: python version
-        run: python3.12 --version
+        run: python3 --version
+        
+      - name: python install req
+        run: python3 -m pip install -r requirements.txt
           
       - name: run script
-        run: python3.12 script.py
+        run: python3 script.py
