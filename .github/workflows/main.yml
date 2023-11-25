@@ -23,14 +23,18 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
+      
       - name: python install
         run: apt install python3
 
+      - name: python upgrade
+        run: apt upgrade python
+        
       - name: python version
         run: python3 --version
 
-      # - name: install req
-      #   run: pip3 install -r requirements.txt
+      - name: install req
+        run: pip3 install -r requirements.txt
           
       - name: run script
         run: python3 script.py
