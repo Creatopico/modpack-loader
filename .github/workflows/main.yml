@@ -23,6 +23,8 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
+      - name: python install
+        run: apt install python3
 
       - name: python version
         run: python
