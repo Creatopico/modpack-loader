@@ -23,7 +23,10 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
-
+      
+      - name: install java
+        run: apt -y install openjdk-11-jdk
+        
       - name: python version
         run: python3.11 --version
         
