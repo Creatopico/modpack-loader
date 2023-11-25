@@ -50,9 +50,13 @@ def read_file(path):
         return file.read()
 
 def load_file(url):
-     with urllib.request.urlopen(url) as pack_info:
-        data = pack_info.read().decode('utf-8')
-        return data
+    try:
+        with urllib.request.urlopen(url) as pack_info:
+            data = pack_info.read().decode('utf-8')
+    except urllib.error.HTTPError as e:
+        print('ERROR: ' + e.read().decode('utf-8'))
+        
+    return data
 
 def write_mod_to_file(path, data):
     with open(path + '/' + data[1] + '.url.txt', 'w') as file:
