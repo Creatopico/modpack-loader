@@ -28,10 +28,7 @@ jobs:
         run: python3.11 --version
         
       - name: python install req
-        run: pip3 install -r requirements.txt
-        
-      - name: python install req
-        run: python3 -m pip install requests
+        run: python3 -m pip install -r requirements.txt
           
       - name: run script
         run: python3.11 script.py
