@@ -45,4 +45,4 @@ jobs:
         run: rm -r /var/mc/server/mods/*
         
       - name: copy new server content
-        run: cp -r mod-workspace/_create_server/mods /var/mc/server/mods
+        run: cp -r mod-workspace/_create_server/mods /var/mc/server/
