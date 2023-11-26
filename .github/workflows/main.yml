@@ -38,7 +38,7 @@ jobs:
         
       - name: copy new packages content
         run: |
-          cp mod-workspace/packages.json /var/mc/www/packages/packages.json
+          cp mod-workspace/packages.json /var/mc/www/packages/
           cp -r mod-workspace/_create_client /var/mc/www/packages/
           
       - name: remove server content
