@@ -38,7 +38,7 @@ jobs:
         
       - name: copy new packages content
         run: |
-          mkdir /var/mc/www/packages
+          mkdir -p /var/mc/www/packages
           cp mod-workspace/packages.json /var/mc/www/packages/packages.json
           cp -r mod-workspace/_create_client /var/mc/www/packages/
           
