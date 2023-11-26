@@ -34,7 +34,7 @@ jobs:
         run: python3.11 script.py
 
       - name: remove packages content
-        run: rm -r /var/mc/www/packages/*
+        run: rm -rf /var/mc/www/packages/*
         
       - name: copy new packages content
         run: |
@@ -42,7 +42,7 @@ jobs:
           cp -r mod-workspace/_create_client /var/mc/www/packages/
           
       - name: remove server content
-        run: rm -r /var/mc/server/mods/*
+        run: rm -rf /var/mc/server/mods/*
         
       - name: copy new server content
         run: cp -r mod-workspace/_create_server/mods /var/mc/server/
