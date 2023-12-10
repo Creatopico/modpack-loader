@@ -1,9 +1,2 @@
-os
-tomllib
-subprocess
-urllib
+urllib3
 requests
-shutil
-datetime
-json
-time

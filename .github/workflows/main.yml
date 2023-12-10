@@ -1,6 +1,5 @@
 
 name: CI
-
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
@@ -19,14 +18,32 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: self-hosted
-
+  
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
-
-      - name: install req
-        run: pip install -r requirements.txt
-          
+        
+      - name: python version
+        run: python3.11 --version
+        
+      - name: python install req
+        run: python3.11 -m pip install -r requirements.txt
+        
       - name: run script
-        run: python3 script.py
+        run: python3.11 script.py
+
+      - name: remove packages content
+        run: rm -rf /var/mc/www/packages/*
+        
+      - name: copy new packages content
+        run: |
+          mkdir -p /var/mc/www/packages
+          cp mod-workspace/packages.json /var/mc/www/packages/packages.json
+          cp -r mod-workspace/_create_client /var/mc/www/packages/
+          
+      - name: remove server content
+        run: rm -rf /var/mc/server/mods/*
+        
+      - name: copy new server content
+        run: cp -r mod-workspace/_create_server/mods /var/mc/server/
