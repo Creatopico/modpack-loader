@@ -1,5 +1,12 @@
 {
-  "minimumVersion" : 1,
-  "packages" : [
-  ]
+    "minimumVersion": 1,
+    "packages": [
+        {
+            "title": "create",
+            "name": "create",
+            "version": "2024-01-26 22:09:31.764758",
+            "location": "_create_client/create.json",
+            "priority": "1"
+        }
+    ]
 }
