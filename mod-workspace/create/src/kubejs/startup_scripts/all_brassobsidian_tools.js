@@ -21,7 +21,7 @@ StartupEvents.registry('item', e => {
   {
     tier.uses = 1561
     tier.speed = 12.0
-    tier.attackDamageBonus = 9.0
+    tier.attackDamageBonus = 3.0
     tier.level = 2
     tier.enchantmentValue = 14
   }
@@ -39,7 +39,7 @@ StartupEvents.registry('item', e => {
   {
     tier.uses = 1561
     tier.speed = 12.0
-    tier.attackDamageBonus = 10.0
+    tier.attackDamageBonus = 5.0
     tier.level = 2
     tier.enchantmentValue = 14
   }
